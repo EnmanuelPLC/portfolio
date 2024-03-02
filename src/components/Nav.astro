@@ -5,7 +5,7 @@ import type { iconPaths } from './IconPaths';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/portfolio' },
+	{ label: 'Home', href: '/portfolio/' },
 	{ label: 'Work', href: '/portfolio/work/' },
 	{ label: 'About', href: '/portfolio/about/' },
 ];
@@ -22,7 +22,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 <nav>
 	<div class="menu-header">
-		<a href="/" class="site-title">
+		<a href="/portfolio/" class="site-title">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
 			Enmanuel Ponce
 		</a>
@@ -85,8 +85,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 								'link',
 								{
 									active:
-										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+										Astro.url.pathname === href,
 								},
 							]}
 							href={href}
