@@ -5,10 +5,25 @@ import Icon from './Icon.astro';
 
 <aside>
 	<h2>Interested in working together?</h2>
-	<CallToAction href="mailto:me@example.com">
-		Send Me a Message
-		<Icon icon="paper-plane-tilt" size="1.2em" />
-	</CallToAction>
+
+	<div style="display: flex; flex-direction: column; width: 400px; gap: 15px">
+		<h2>Contact me at</h2>
+
+		<div style="display: flex; justify-content: space-between">
+			<CallToAction href="mailto:enmanuelponcedeleon@gmail.com" title="Email">
+				<Icon icon="email" size="1.2em" />
+			</CallToAction>
+
+			<CallToAction title="WhatsApp" href="https://wa.me/+5359470291?text=Hello Enmanuel, i'm interested to work with you!">
+				<Icon icon="whatsapp" size="1.2em" />
+			</CallToAction>
+
+			<CallToAction href="https://t.me/EnmanueLPLC" target="_blank" title="Telegram">
+				<Icon icon="telegram" size="1.2em" />
+			</CallToAction>
+		</div>
+	</div>
+
 </aside>
 
 <style>
