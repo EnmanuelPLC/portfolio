@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -31,19 +32,23 @@ const projects = (await getCollection('work'))
 			<header class="hero">
 				<Hero
 					title="Hello, my name is Enmanuel Ponce"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					tagline="I am a skilled Software Engineer in Web Development, currently based in Havana, Cuba."
 					align="start"
 				>
 					<div class="roles">
+						<Pill><Icon icon="trophy" size="1.33em" />Software Engineer</Pill>
 						<Pill><Icon icon="code" size="1.33em" />Fronted Developer</Pill>
 					</div>
+
+					<div class="roles"><Pill><Icon icon="rocket-launch" size="1.33em" />Machine Learning Enthusiast</Pill></div>
 				</Hero>
 
-				<img
+				<Image
 					alt="Enmanuel Ponce White smiling in a red plaid shirt and tortoise shell glasses"
 					width="480"
 					height="620"
 					src="/portfolio/assets/portrait.png"
+					loading="eager"
 				/>
 			</header>
 
@@ -51,51 +56,39 @@ const projects = (await getCollection('work'))
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
-				</header>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<h5>Development</h5>
+					<div>
+						Fronted
+						<ul>
+							<li>React</li>
+							<li>NextJs</li>
+							<li>NextUI</li>
+							<li>Astro</li>
+							<li>Material UI</li>
+							<li>Grommet</li>
+							<li>Styled components</li>
+						</ul>
+					</div>
+					<div>
+						Backend
+						<ul>
+							<li>Express</li>
+							<li>NestJs</li>
+							<li>Laravel</li>
+						</ul>
+					</div>
+					<div>
+						Scripting
+						<ul>
+							<li>Python</li>
+							<li>Telegram API (Bots)</li>
+						</ul>
+					</div>
 
-				<div class="gallery">
-					<Grid variant="offset">
-						{
-							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-
-				<div class="cta">
-					<CallToAction href="/work/">
-						View All
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
-			</section>
-
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
+					<h5>General</h5>
 				</div>
 			</section>
 		</main>
