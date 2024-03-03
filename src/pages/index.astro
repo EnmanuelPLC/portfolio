@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -31,19 +32,23 @@ const projects = (await getCollection('work'))
 			<header class="hero">
 				<Hero
 					title="Hello, my name is Enmanuel Ponce"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					tagline="I am a Creative Developer who is currently based in Havana, Cuba."
 					align="start"
 				>
 					<div class="roles">
+						<Pill><Icon icon="trophy" size="1.33em" />Software Engineer</Pill>
 						<Pill><Icon icon="code" size="1.33em" />Fronted Developer</Pill>
 					</div>
+
+					<div class="roles"><Pill><Icon icon="rocket-launch" size="1.33em" />Machine Learning Enthusiast</Pill></div>
 				</Hero>
 
-				<img
+				<Image
 					alt="Enmanuel Ponce White smiling in a red plaid shirt and tortoise shell glasses"
 					width="480"
 					height="620"
 					src="/portfolio/assets/portrait.png"
+					loading="eager"
 				/>
 			</header>
 
@@ -77,27 +82,27 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
+			<!--<section class="section with-background bg-variant">-->
+			<!--	<header class="section-header stack gap-2 lg:gap-4">-->
+			<!--		<h3>Mentions</h3>-->
+			<!--		<p>-->
+			<!--			I have been fortunate enough to receive praise for my work in several publications. Take-->
+			<!--			a look below to learn more.-->
+			<!--		</p>-->
+			<!--	</header>-->
 
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section>
+			<!--	<div class="gallery">-->
+			<!--		<Grid variant="small">-->
+			<!--			{-->
+			<!--				['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (-->
+			<!--					<li class="mention-card">-->
+			<!--						<p>{brand}</p>-->
+			<!--					</li>-->
+			<!--				))-->
+			<!--			}-->
+			<!--		</Grid>-->
+			<!--	</div>-->
+			<!--</section>-->
 		</main>
 
 		<ContactCTA />
