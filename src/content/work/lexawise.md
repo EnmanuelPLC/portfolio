@@ -6,7 +6,9 @@ img_alt: Real Estate app
 description: |
   Since June - 2023 to March 2024
 tags:
-  - Dev
+  - Developer
+  - Grommet UI
+  - Styled Component
   - SEO - Analytics
 ---
 
