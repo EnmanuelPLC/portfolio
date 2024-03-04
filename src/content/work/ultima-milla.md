@@ -9,6 +9,7 @@ tags:
   - Developer
   - ReactJs
   - Material UI
+  - React Redux Toolkit
 ---
 
 As a dedicated React Frontend Developer on the Ultima Milla project, my role has been versatile and impactful over the course of the application's development lifecycle. This project consisted of creating a premier delivery service application for the residents of Ecuador, empowered by the ReactJS framework alongside Material UI and react-redux. The goal was to provide real-time tracking of delivery requests using an interactive map interface, all packaged within a seamless user experience.
