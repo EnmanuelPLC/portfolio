@@ -27,16 +27,16 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
+	<div class="stack gap-20 lg:gap-24">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Enmanuel Ponce"
-					tagline="I am a skilled Software Engineer in Web Development, currently based in Havana, Cuba."
+					title="Hello, I'm Enmanuel Ponce"
+					tagline="A skilled Software Engineer in Web Development, currently based in Havana, Cuba."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="trophy" size="1.33em" />Software Engineer</Pill>
+						<Pill><Icon icon="graduate" size="1.33em" />Software Engineer</Pill>
 						<Pill><Icon icon="code" size="1.33em" />Fronted Developer</Pill>
 					</div>
 
@@ -57,10 +57,10 @@ const projects = (await getCollection('work'))
 
 		<main class="wrapper stack">
 			<h2>Skills</h2>
-			<section class="flex mt-5 gap-12">
+			<section class="flex mt-5 gap-12 max-sm:flex-col max-sm:gap-8">
 				<div class="flex flex-col">
 					<h5>Development</h5>
-					<div class="flex gap-12">
+					<div class="flex gap-12 max-sm:flex-col max-sm:gap-1">
 						<div class="mt-1">
 							<span class="font-bold">Fronted</span>
 							<ul class="list-disc ml-5">
