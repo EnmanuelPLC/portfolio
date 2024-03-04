@@ -1,14 +1,12 @@
 ---
-title: Lexawise
+title: Ultima milla
 publishDate: 2023-03-04 00:00:00
-img: /portfolio/assets/stock-3.png
-img_alt: Real Estate app
+img: /portfolio/assets/stock-2.jpg
+img_alt: Ultima milla
 description: |
-  Since June - 2023 to March 2024
+  December - 2022 to February 2023
 tags:
-  - Developer
-  - Grommet UI
-  - Styled Component
+  - Dev
   - SEO - Analytics
 ---
 

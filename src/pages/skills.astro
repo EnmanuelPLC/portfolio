@@ -1,0 +1,111 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+
+const projects = (await getCollection('work')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout
+	title="Skills | Enmanuel Ponce"
+	description="Skills all over Enmanuel career"
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack">
+			<Hero
+				title="Skills all over my career"
+				tagline=""
+				align="start"
+			/>
+			<section class="flex flex-col mt-5 gap-12 max-sm:flex-col max-sm:gap-8">
+				<div class="flex flex-col">
+					<h5>Programming Languages</h5>
+					<div class="flex gap-12 max-sm:flex-col max-sm:gap-1">
+						<div class="mt-1">
+							<ul class="list-disc ml-5">
+								<li>Java</li>
+								<li>C#</li>
+								<li>JavaScript</li>
+								<li>TypeScript</li>
+								<li>Python</li>
+								<li>PHP</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-col">
+					<h5>Web Development</h5>
+					<div class="flex gap-12 max-sm:flex-col max-sm:gap-1">
+						<div class="mt-1">
+							<span class="font-bold">Fronted</span>
+							<ul class="list-disc ml-5">
+								<li>React</li>
+								<li>NextJs</li>
+								<li>Astro</li>
+								<li>NextUI</li>
+								<li>Material UI</li>
+								<li>Prime UI</li>
+								<li>Grommet UI</li>
+								<li>Styled components</li>
+								<li>SEO - Analytics</li>
+							</ul>
+						</div>
+						<div class="mt-1">
+							<span class="font-bold">Backend</span>
+							<ul class="list-disc ml-5">
+								<li>Express</li>
+								<li>NestJs</li>
+								<li>Laravel</li>
+								<li>Prisma ORM</li>
+								<li>API-Rest</li>
+							</ul>
+						</div>
+						<div class="mt-1">
+							<span class="font-bold">Database</span>
+							<ul class="list-disc ml-5">
+								<li>PostgresSQL</li>
+								<li>SQL Server</li>
+								<li>MySQL</li>
+								<li>SQLite</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-col">
+					<h5>Project Experiences</h5>
+					<ul class="list-disc ml-5 mt-2">
+						<li>Scrum</li>
+						<li>Agile</li>
+						<li>Leadership experience</li>
+						<li>Requirements analysis</li>
+						<li>System architectures</li>
+						<li>Team work</li>
+						<li>Multi-role ability</li>
+					</ul>
+				</div>
+				<div class="flex flex-col">
+					<h5>Tools</h5>
+					<ul class="list-disc ml-5 mt-2">
+						<li>Copilot</li>
+						<li>Jetbrains AI Assistant</li>
+						<li>Jira</li>
+						<li>Bitbucket</li>
+						<li>Git</li>
+						<li>Slack</li>
+						<li>Discord</li>
+						<li>Webstorm</li>
+						<li>Vscode</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>
