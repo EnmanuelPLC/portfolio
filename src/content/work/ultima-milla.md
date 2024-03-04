@@ -6,14 +6,17 @@ img_alt: Ultima milla
 description: |
   December - 2022 to February 2023
 tags:
-  - Dev
-  - SEO - Analytics
+  - Developer
+  - ReactJs
+  - Material UI
 ---
 
-As a Front-end Developer at lexawise.com, I not only designed, built, and optimized the client-side of the application, but I also addressed several crucial areas like bug fixes and SEO optimization. While using ReactJS, a robust and scalable JavaScript library, I created innovative, user-focused designs and interfaces that provided a seamless and interactive user experience. I wrote reusable components, managed state and props, utilized React hooks, and handled events.
+As a dedicated React Frontend Developer on the Ultima Milla project, my role has been versatile and impactful over the course of the application's development lifecycle. This project consisted of creating a premier delivery service application for the residents of Ecuador, empowered by the ReactJS framework alongside Material UI and react-redux. The goal was to provide real-time tracking of delivery requests using an interactive map interface, all packaged within a seamless user experience.
 
-Another important aspect of my work was performing regular API calls which allowed me to update the web content dynamically. I routinely tested and debugged the application, spending considerable time identifying, diagnosing, and fixing bugs. This process vastly improved the application's performance and reliability.
+My first significant responsibility was optimizing the application for Search Engine Optimization (SEO). This was an essential step to gain visibility in the digital world and attract more users to the application. I worked meticulously on integrating SEO best practices into the app codebase, focusing on meta tags, site performance, and content optimization. This immensely improved the online presence of the app while attracting a larger user base, leading to an increase in the overall usage.
 
-Moreover, I put a strong focus on search engine optimization. I implemented SEO best practices, like creating search-friendly URLs, including relevant keywords in content, and utilizing meta tags. This ensured that our web pages were easily discoverable and ranked higher in search results, thereby driving more organic traffic to the site.
+Efficiency was another critical area where I made substantial contributions. I delved deep into the code, identifying areas that could benefit from performance enhancements. This included optimizing render cycles in React, efficiently managing state with react-redux, and minimizing unnecessary network calls. The end result was a more performant app delivering a smoother, faster user experience that was well-received by the users.
 
-Part of my main responsibilities was to ensure the app's optimal speed, scalability, and its responsive and consistent interface across various devices. All in all, my work eliminated bugs, increased the application's visibility to search engines, and enhanced the overall user experience.
+During the course of the project, I faced several bug-fixing challenges. There were numerous bugs disrupting the otherwise smooth operation of the app. Determined to enhance the stability and reliability of the application, I successfully diagnosed, debugged, and resolved these issues. Every bug fixed pushed the project closer to its optimal state, contributing to the overall reliability of the app.
+
+In summary, my work at the Ultima Milla project has been a journey of consistent learning, implementation, and improvement. I've been able to leverage my ReactJS skills to optimize and enhance a service critical for many citizens. The experience I've gained from handling SEO optimization, efficiency improvement, and bug-fixing has not only enriched my expertise as a React Developer but also resulted in a robust, efficient, and reliable application serving users across Ecuador.
