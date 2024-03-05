@@ -2,7 +2,7 @@
 title: Ultima milla
 publishDate: 2023-03-04 00:00:00
 img: /portfolio/assets/stock-2.png
-img_alt: Ultima milla
+img_alt: Ultima Milla
 description: |
   December - 2022 to February 2023
 tags:
