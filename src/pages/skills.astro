@@ -4,13 +4,61 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
-import Grid from '../components/Grid.astro';
+import Nextjs from '../components/icons/nextjs';
+import React from '../components/icons/react';
+import Csharp from '../components/icons/csharp';
+import Java from '../components/icons/java';
+import Javascript from '../components/icons/javascript';
+import Typescript from '../components/icons/typescript';
+import Python from '../components/icons/python';
+import Php from '../components/icons/php';
+import AstroIcon from '../components/icons/astro';
+import MaterialUI from '../components/icons/materilui';
+import PrimeUI from '../components/icons/primeui';
+import Grommet from '../components/icons/grommet';
+import Css from '../components/icons/css';
+import Html from '../components/icons/html';
+import Laravel from '../components/icons/laravel';
+import Nestjs from '../components/icons/nestjs';
+import Angular from '../components/icons/angular';
+import Express from '../components/icons/express';
+import Prisma from '../components/icons/prisma';
+import Api from '../components/icons/api';
+import Keystonejs from '../components/icons/keystonejs';
+import Postgres from '../components/icons/postgres';
+import Mysql from '../components/icons/mysql';
+import Sqlite from '../components/icons/sqlite';
+import Sqlserver from '../components/icons/sqlserver';
+import Scrum from '../components/icons/scrum';
+import Agile from '../components/icons/agile';
+import Leadership from '../components/icons/leadership';
+import Requirements from '../components/icons/requirements';
+import SystemArchitecture from '../components/icons/system-architecture';
+import TeamWork from '../components/icons/team-work';
+import MultiRole from '../components/icons/multi-role';
+import Jira from '../components/icons/jira';
+import Bitbucket from '../components/icons/bitbucket';
+import Slack from '../components/icons/slack';
+import Git from '../components/icons/git';
+import Discord from '../components/icons/discord';
+import Webstorm from '../components/icons/webstorm';
+import Phpstorm from '../components/icons/phpstorm';
+import Vscode from '../components/icons/vscode';
+import Vs from '../components/icons/vs';
 
 const projects = (await getCollection('work')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
+
+const skillsCollection = [
+	{category: 'Programming Languages', skills: [{name: 'C#', icon: Csharp}, {name: 'Python', icon: Python}, {name: 'Java', icon: Java}, {name: 'Html', icon: Html}, {name: 'Css', icon: Css}, {name: 'Javascript', icon: Javascript}, {name: 'Typescript', icon: Typescript}, {name: 'Php', icon: Php}]},
+	{category: 'Fronted', skills: [{name: 'NextJs', icon: Nextjs}, {name: 'React', icon: React}, {name: 'Angular', icon: Angular}, {name: 'Astro', icon: AstroIcon}, {name: 'Material UI', icon: MaterialUI}, {name: 'Grommet', icon: Grommet}, {name: 'Prime React', icon: PrimeUI}]},
+	{category: 'Backend', skills: [{name: 'NestJs', icon: Nestjs}, {name: 'Laravel', icon: Laravel}, {name: 'Express', icon: Express}, {name: 'Prisma', icon: Prisma}, {name: 'Api', icon: Api}, {name: 'Keystone', icon: Keystonejs}]},
+	{category: 'Databases', skills: [{name: 'PostgresSQL', icon: Postgres}, {name: 'MySQL', icon: Mysql}, {name: 'SQLite', icon: Sqlite}, {name: 'SQLServer', icon: Sqlserver}]},
+	{category: 'Project Experiences', skills: [{name: 'Scrum Methodology', icon: Scrum}, {name: 'Agile Development', icon: Agile}, {name: 'Leadership Experience', icon: Leadership}, {name: 'Business requirements analysis', icon: Requirements}, {name: 'Systems Architectures knowledge', icon: SystemArchitecture}, {name: 'Team Work', icon: TeamWork}, {name: 'Multi Role ability', icon: MultiRole}]},
+	{category: 'Tools', skills: [{name: 'Jira', icon: Jira}, {name: 'Bitbucket', icon: Bitbucket}, {name: 'Slack', icon: Slack}, {name: 'Git', icon: Git}, {name: 'Discord', icon: Discord}, {name: 'Webstorm', icon: Webstorm}, {name: 'Phpstorm', icon: Phpstorm}, {name: 'VSCode', icon: Vscode}, {name: 'Visual Studio', icon: Vs}]},
+];
 ---
 
 <BaseLayout
@@ -18,94 +66,69 @@ const projects = (await getCollection('work')).sort(
 	description="Skills all over Enmanuel career"
 >
 	<div class="stack gap-20">
-		<main class="wrapper stack">
+		<main class="wrapper stack gap-32">
 			<Hero
 				title="Skills all over my career"
 				tagline=""
 				align="start"
 			/>
-			<section class="flex flex-col mt-5 gap-12 max-sm:flex-col max-sm:gap-8">
-				<div class="flex flex-col">
-					<h5>Programming Languages</h5>
-					<div class="flex gap-12 max-sm:flex-col max-sm:gap-1">
-						<div class="mt-1">
-							<ul class="list-disc ml-5">
-								<li>Java</li>
-								<li>C#</li>
-								<li>JavaScript</li>
-								<li>TypeScript</li>
-								<li>Python</li>
-								<li>PHP</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="flex flex-col">
-					<h5>Web Development</h5>
-					<div class="flex gap-12 max-sm:flex-col max-sm:gap-1">
-						<div class="mt-1">
-							<span class="font-bold">Fronted</span>
-							<ul class="list-disc ml-5">
-								<li>React</li>
-								<li>NextJs</li>
-								<li>Astro</li>
-								<li>NextUI</li>
-								<li>Material UI</li>
-								<li>Prime UI</li>
-								<li>Grommet UI</li>
-								<li>Styled components</li>
-								<li>SEO - Analytics</li>
-							</ul>
-						</div>
-						<div class="mt-1">
-							<span class="font-bold">Backend</span>
-							<ul class="list-disc ml-5">
-								<li>Express</li>
-								<li>NestJs</li>
-								<li>Laravel</li>
-								<li>Prisma ORM</li>
-								<li>API-Rest</li>
-							</ul>
-						</div>
-						<div class="mt-1">
-							<span class="font-bold">Database</span>
-							<ul class="list-disc ml-5">
-								<li>PostgresSQL</li>
-								<li>SQL Server</li>
-								<li>MySQL</li>
-								<li>SQLite</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="flex flex-col">
-					<h5>Project Experiences</h5>
-					<ul class="list-disc ml-5 mt-2">
-						<li>Scrum</li>
-						<li>Agile</li>
-						<li>Leadership experience</li>
-						<li>Requirements analysis</li>
-						<li>System architectures</li>
-						<li>Team work</li>
-						<li>Multi-role ability</li>
-					</ul>
-				</div>
-				<div class="flex flex-col">
-					<h5>Tools</h5>
-					<ul class="list-disc ml-5 mt-2">
-						<li>Copilot</li>
-						<li>Jetbrains AI Assistant</li>
-						<li>Jira</li>
-						<li>Bitbucket</li>
-						<li>Git</li>
-						<li>Slack</li>
-						<li>Discord</li>
-						<li>Webstorm</li>
-						<li>Vscode</li>
-					</ul>
+			<!--	<div class="flex flex-col">-->
+			<!--		<h5>Tools</h5>-->
+			<!--		<ul class="list-disc ml-5 mt-2">-->
+			<!--			<li>Copilot</li>-->
+			<!--			<li>Jetbrains AI Assistant</li>-->
+			<!--			<li>Jira</li>-->
+			<!--			<li>Bitbucket</li>-->
+			<!--			<li>Git</li>-->
+			<!--			<li>Slack</li>-->
+			<!--			<li>Discord</li>-->
+			<!--			<li>Phpstorm</li>-->
+			<!--			<li>Vscode</li>-->
+			<!--		</ul>-->
+			<!--	</div>-->
+			<!--</section>-->
+			<section class="section with-background bg-variant">
+				<div class="flex flex-col gap-10">
+					{
+						skillsCollection.map(({category, skills}) => (
+							<div class="flex flex-col gap-3 w-auto mx-auto">
+								<h5>{category}</h5>
+								<div class="mention-card">
+									<div class="flex justify-between items-center w-fulld">
+										{
+											skills.map(({ name, icon: IconToRender}) => (
+												<div class="w-16 mx-3" title={name}><IconToRender/></div>
+											))
+										}
+									</div>
+								</div>
+							</div>
+						))
+					}
 				</div>
 			</section>
 		</main>
 		<ContactCTA />
 	</div>
+	<style>
+		.mention-card {
+			display: flex;
+			height: 7rem;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			border: 1px solid var(--gray-800);
+			border-radius: 1.5rem;
+			color: var(--gray-300);
+			background: var(--gradient-subtle);
+			box-shadow: var(--shadow-sm);
+		}
+
+		@media (min-width: 50em) {
+			.mention-card {
+				border-radius: 1.5rem;
+				height: 9.5rem;
+			}
+		}
+	</style>
 </BaseLayout>
