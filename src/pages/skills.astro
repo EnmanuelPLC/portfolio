@@ -42,13 +42,13 @@ const projects = (await getCollection('work')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 
-const skills = [
-	{name: 'Programming Languages', icons: [Csharp, Python, Java, Html, Css, Javascript, Typescript, Php]},
-	{name: 'Fronted', icons: [Nextjs, React, Angular, AstroIcon, MaterialUI, PrimeUI, Grommet]},
-	{name: 'Backend', icons: [Nestjs, Laravel, Express, Prisma, Api, Keystonejs]},
-	{name: 'Databases', icons: [Postgres, Mysql, Sqlite, Sqlserver]},
-	{name: 'Project Experiences', icons: [Scrum, Agile, Leadership, Requirements, SystemArchitecture, TeamWork, MultiRole]},
-	{name: 'Tools', icons: []},
+const skillsCollection = [
+	{category: 'Programming Languages', skills: [{name: 'C#', icon: Csharp}, {name: 'Python', icon: Python}, {name: 'Java', icon: Java}, {name: 'Html', icon: Html}, {name: 'Css', icon: Css}, {name: 'Javascript', icon: Javascript}, {name: 'Typescript', icon: Typescript}, {name: 'Php', icon: Php}]},
+	{category: 'Fronted', skills: [{name: 'NextJs', icon: Nextjs}, {name: 'React', icon: React}, {name: 'Angular', icon: Angular}, {name: 'Astro', icon: AstroIcon}, {name: 'Material UI', icon: MaterialUI}, {name: 'Grommet', icon: Grommet}, {name: 'Prime React', icon: PrimeUI}]},
+	{category: 'Backend', skills: [{name: 'NestJs', icon: Nestjs}, {name: 'Laravel', icon: Laravel}, {name: 'Express', icon: Express}, {name: 'Prisma', icon: Prisma}, {name: 'Api', icon: Api}, {name: 'Keystone', icon: Keystonejs}]},
+	{category: 'Databases', skills: [{name: 'PostgresSQL', icon: Postgres}, {name: 'MySQL', icon: Mysql}, {name: 'SQLite', icon: Sqlite}, {name: 'SQLServer', icon: Sqlserver}]},
+	{category: 'Project Experiences', skills: [{name: 'Scrum Methodology', icon: Scrum}, {name: 'Agile Development', icon: Agile}, {name: 'Leadership Experience', icon: Leadership}, {name: 'Business requirements analysis', icon: Requirements}, {name: 'Systems Architectures knowledge', icon: SystemArchitecture}, {name: 'Team Work', icon: TeamWork}, {name: 'Multi Role ability', icon: MultiRole}]},
+	{category: 'Tools', skills: []},
 ];
 ---
 
@@ -63,18 +63,6 @@ const skills = [
 				tagline=""
 				align="start"
 			/>
-			<!--	<div class="flex flex-col">-->
-			<!--		<h5>Project Experiences</h5>-->
-			<!--		<ul class="list-disc ml-5 mt-2">-->
-			<!--			<li>Scrum</li>-->
-			<!--			<li>Agile</li>-->
-			<!--			<li>Leadership experience</li>-->
-			<!--			<li>Requirements analysis</li>-->
-			<!--			<li>System architectures</li>-->
-			<!--			<li>Team work</li>-->
-			<!--			<li>Multi-role ability</li>-->
-			<!--		</ul>-->
-			<!--	</div>-->
 			<!--	<div class="flex flex-col">-->
 			<!--		<h5>Tools</h5>-->
 			<!--		<ul class="list-disc ml-5 mt-2">-->
@@ -93,14 +81,14 @@ const skills = [
 			<section class="section with-background bg-variant">
 				<div class="flex flex-col gap-10">
 					{
-						skills.map(({name, icons}) => (
+						skillsCollection.map(({category, skills}) => (
 							<div class="flex flex-col gap-3 w-auto mx-auto">
-								<h5>{name}</h5>
+								<h5>{category}</h5>
 								<div class="mention-card">
 									<div class="flex justify-between items-center w-fulld">
 										{
-											icons.map((IconP) => (
-												<div class="w-16 mx-3" title="oook"><IconP /></div>
+											skills.map(({ name, icon: IconToRender}) => (
+												<div class="w-16 mx-3" title={name}><IconToRender/></div>
 											))
 										}
 									</div>
