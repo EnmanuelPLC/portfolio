@@ -30,6 +30,13 @@ import Postgres from '../components/icons/postgres';
 import Mysql from '../components/icons/mysql';
 import Sqlite from '../components/icons/sqlite';
 import Sqlserver from '../components/icons/sqlserver';
+import Scrum from '../components/icons/scrum';
+import Agile from '../components/icons/agile';
+import Leadership from '../components/icons/leadership';
+import Requirements from '../components/icons/requirements';
+import SystemArchitecture from '../components/icons/system-architecture';
+import TeamWork from '../components/icons/team-work';
+import MultiRole from '../components/icons/multi-role';
 
 const projects = (await getCollection('work')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
@@ -40,7 +47,7 @@ const skills = [
 	{name: 'Fronted', icons: [Nextjs, React, Angular, AstroIcon, MaterialUI, PrimeUI, Grommet]},
 	{name: 'Backend', icons: [Nestjs, Laravel, Express, Prisma, Api, Keystonejs]},
 	{name: 'Databases', icons: [Postgres, Mysql, Sqlite, Sqlserver]},
-	{name: 'Project Experiences', icons: []},
+	{name: 'Project Experiences', icons: [Scrum, Agile, Leadership, Requirements, SystemArchitecture, TeamWork, MultiRole]},
 	{name: 'Tools', icons: []},
 ];
 ---
@@ -56,45 +63,6 @@ const skills = [
 				tagline=""
 				align="start"
 			/>
-			<!--<section class="flex flex-col mt-5 gap-12 max-sm:flex-col max-sm:gap-8">-->
-			<!--	<div class="flex flex-col">-->
-			<!--		<h5>Web Development</h5>-->
-			<!--		<div class="flex gap-12 max-sm:flex-col max-sm:gap-1">-->
-			<!--			<div class="mt-1">-->
-			<!--				<span class="font-bold">Fronted</span>-->
-			<!--				<ul class="list-disc ml-5">-->
-			<!--					<li>React</li>-->
-			<!--					<li>NextJs</li>-->
-			<!--					<li>MaterialUI</li>-->
-			<!--					<li>NextUI</li>-->
-			<!--					<li>Material UI</li>-->
-			<!--					<li>Prime UI</li>-->
-			<!--					<li>Grommet UI</li>-->
-			<!--					<li>Styled components</li>-->
-			<!--					<li>SEO - Analytics</li>-->
-			<!--				</ul>-->
-			<!--			</div>-->
-			<!--			<div class="mt-1">-->
-			<!--				<span class="font-bold">Backend</span>-->
-			<!--				<ul class="list-disc ml-5">-->
-			<!--					<li>Express</li>-->
-			<!--					<li>NestJs</li>-->
-			<!--					<li>Laravel</li>-->
-			<!--					<li>Prisma ORM</li>-->
-			<!--					<li>API-Rest</li>-->
-			<!--				</ul>-->
-			<!--			</div>-->
-			<!--			<div class="mt-1">-->
-			<!--				<span class="font-bold">Database</span>-->
-			<!--				<ul class="list-disc ml-5">-->
-			<!--					<li>PostgresSQL</li>-->
-			<!--					<li>SQL Server</li>-->
-			<!--					<li>MySQL</li>-->
-			<!--					<li>SQLite</li>-->
-			<!--				</ul>-->
-			<!--			</div>-->
-			<!--		</div>-->
-			<!--	</div>-->
 			<!--	<div class="flex flex-col">-->
 			<!--		<h5>Project Experiences</h5>-->
 			<!--		<ul class="list-disc ml-5 mt-2">-->
@@ -129,10 +97,10 @@ const skills = [
 							<div class="flex flex-col gap-3 w-auto mx-auto">
 								<h5>{name}</h5>
 								<div class="mention-card">
-									<div class="flex justify-between items-center w-4/5">
+									<div class="flex justify-between items-center w-fulld">
 										{
 											icons.map((IconP) => (
-												<div class="w-16 mr-5" title="oook"><IconP /></div>
+												<div class="w-16 mx-3" title="oook"><IconP /></div>
 											))
 										}
 									</div>

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Sqlserver = () => (
-
     <svg viewBox="0 0 128 128">
         <defs>
             <linearGradient id="a" x1="-2901.9519" x2="-2061.249" y1="923.573" y2="1420.3311"
