@@ -24,6 +24,12 @@ import Nestjs from '../components/icons/nestjs';
 import Angular from '../components/icons/angular';
 import Express from '../components/icons/express';
 import Prisma from '../components/icons/prisma';
+import Api from '../components/icons/api';
+import Keystonejs from '../components/icons/keystonejs';
+import Postgres from '../components/icons/postgres';
+import Mysql from '../components/icons/mysql';
+import Sqlite from '../components/icons/sqlite';
+import Sqlserver from '../components/icons/sqlserver';
 
 const projects = (await getCollection('work')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
@@ -32,10 +38,10 @@ const projects = (await getCollection('work')).sort(
 const skills = [
 	{name: 'Programming Languages', icons: [Csharp, Python, Java, Html, Css, Javascript, Typescript, Php]},
 	{name: 'Fronted', icons: [Nextjs, React, Angular, AstroIcon, MaterialUI, PrimeUI, Grommet]},
-	{name: 'Backend', icons: [Nestjs, Laravel, Express, Prisma]},
+	{name: 'Backend', icons: [Nestjs, Laravel, Express, Prisma, Api, Keystonejs]},
+	{name: 'Databases', icons: [Postgres, Mysql, Sqlite, Sqlserver]},
 	{name: 'Project Experiences', icons: []},
 	{name: 'Tools', icons: []},
-	{name: 'Others', icons: []}
 ];
 ---
 
