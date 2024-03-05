@@ -37,6 +37,15 @@ import Requirements from '../components/icons/requirements';
 import SystemArchitecture from '../components/icons/system-architecture';
 import TeamWork from '../components/icons/team-work';
 import MultiRole from '../components/icons/multi-role';
+import Jira from '../components/icons/jira';
+import Bitbucket from '../components/icons/bitbucket';
+import Slack from '../components/icons/slack';
+import Git from '../components/icons/git';
+import Discord from '../components/icons/discord';
+import Webstorm from '../components/icons/webstorm';
+import Phpstorm from '../components/icons/phpstorm';
+import Vscode from '../components/icons/vscode';
+import Vs from '../components/icons/vs';
 
 const projects = (await getCollection('work')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
@@ -48,7 +57,7 @@ const skillsCollection = [
 	{category: 'Backend', skills: [{name: 'NestJs', icon: Nestjs}, {name: 'Laravel', icon: Laravel}, {name: 'Express', icon: Express}, {name: 'Prisma', icon: Prisma}, {name: 'Api', icon: Api}, {name: 'Keystone', icon: Keystonejs}]},
 	{category: 'Databases', skills: [{name: 'PostgresSQL', icon: Postgres}, {name: 'MySQL', icon: Mysql}, {name: 'SQLite', icon: Sqlite}, {name: 'SQLServer', icon: Sqlserver}]},
 	{category: 'Project Experiences', skills: [{name: 'Scrum Methodology', icon: Scrum}, {name: 'Agile Development', icon: Agile}, {name: 'Leadership Experience', icon: Leadership}, {name: 'Business requirements analysis', icon: Requirements}, {name: 'Systems Architectures knowledge', icon: SystemArchitecture}, {name: 'Team Work', icon: TeamWork}, {name: 'Multi Role ability', icon: MultiRole}]},
-	{category: 'Tools', skills: []},
+	{category: 'Tools', skills: [{name: 'Jira', icon: Jira}, {name: 'Bitbucket', icon: Bitbucket}, {name: 'Slack', icon: Slack}, {name: 'Git', icon: Git}, {name: 'Discord', icon: Discord}, {name: 'Webstorm', icon: Webstorm}, {name: 'Phpstorm', icon: Phpstorm}, {name: 'VSCode', icon: Vscode}, {name: 'Visual Studio', icon: Vs}]},
 ];
 ---
 
@@ -73,7 +82,7 @@ const skillsCollection = [
 			<!--			<li>Git</li>-->
 			<!--			<li>Slack</li>-->
 			<!--			<li>Discord</li>-->
-			<!--			<li>Webstorm</li>-->
+			<!--			<li>Phpstorm</li>-->
 			<!--			<li>Vscode</li>-->
 			<!--		</ul>-->
 			<!--	</div>-->
