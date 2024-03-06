@@ -6,12 +6,9 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Component Imports
-import CallToAction from '../components/CallToAction.astro';
-import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -28,20 +25,23 @@ const projects = (await getCollection('work'))
 
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-24">
-		<div class="wrapper stack gap-8 lg:gap-20">
+		<div class="w-full px-32 stack gap-8 lg:gap-20 pb-24 border-b">
 			<header class="hero">
-				<Hero
-					title="Hello, I'm Enmanuel Ponce"
-					tagline="A skilled Software Engineer in Web Development, currently based in Havana, Cuba."
-					align="start"
-				>
-					<div class="roles">
-						<Pill><Icon icon="graduate" size="1.33em" />Software Engineer</Pill>
-						<Pill><Icon icon="code" size="1.33em" />Fronted Developer</Pill>
-					</div>
+				<div>
+					<h1 class="title">Hello, I'm Enmanuel Ponce de Leon C.</h1>
+					<Hero
+						title=""
+						tagline="A skilled Software Engineer in Web Development, currently based in Havana, Cuba."
+						align="start"
+					>
+						<div class="roles">
+							<Pill><Icon icon="graduate" size="1.33em" />Software Engineer</Pill>
+							<Pill><Icon icon="code" size="1.33em" />Fullstack Developer</Pill>
+						</div>
 
-					<div class="roles"><Pill><Icon icon="rocket-launch" size="1.33em" />Machine Learning Enthusiast</Pill></div>
-				</Hero>
+						<div class="roles"><Pill><Icon icon="rocket-launch" size="1.33em" />Machine Learning Enthusiast</Pill></div>
+					</Hero>
+				</div>
 
 				<Image
 					alt="Enmanuel Ponce White smiling in a red plaid shirt and tortoise shell glasses"
@@ -56,6 +56,10 @@ const projects = (await getCollection('work'))
 				<Skills />
 			</main>
 
+		</div>
+
+		<div class="px-32 flex-grow">
+			<h3>Download my CV</h3>
 		</div>
 
 		<ContactCTA />
