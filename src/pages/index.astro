@@ -9,6 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
+import CallToAction from '../components/CallToAction.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -59,8 +60,8 @@ const projects = (await getCollection('work'))
 
 		</div>
 
-		<div class="px-32 flex-grow max-md:px-8">
-			<h3>Download my CV</h3>
+		<div class="px-32 flex-grow max-md:px-8 w-3/5 max-sm:w-4/5 mx-auto">
+			<CallToAction href="/portfolio/public/cv.pdf" download>Download CV</CallToAction>
 		</div>
 
 		<ContactCTA />
