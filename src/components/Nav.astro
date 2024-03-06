@@ -19,7 +19,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 ];
 ---
 
-<nav class={Astro.url.pathname === '/portfolio/' && "slide-bottom mb-[-100px]"}>
+<nav class={Astro.url.pathname === '/portfolio' && "slide-bottom mb-[-100px]"}>
 	<div class="menu-header">
 		<a href="/portfolio/" class="site-title">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
