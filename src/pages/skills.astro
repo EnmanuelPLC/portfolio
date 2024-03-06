@@ -72,21 +72,6 @@ const skillsCollection = [
 				tagline=""
 				align="start"
 			/>
-			<!--	<div class="flex flex-col">-->
-			<!--		<h5>Tools</h5>-->
-			<!--		<ul class="list-disc ml-5 mt-2">-->
-			<!--			<li>Copilot</li>-->
-			<!--			<li>Jetbrains AI Assistant</li>-->
-			<!--			<li>Jira</li>-->
-			<!--			<li>Bitbucket</li>-->
-			<!--			<li>Git</li>-->
-			<!--			<li>Slack</li>-->
-			<!--			<li>Discord</li>-->
-			<!--			<li>Phpstorm</li>-->
-			<!--			<li>Vscode</li>-->
-			<!--		</ul>-->
-			<!--	</div>-->
-			<!--</section>-->
 			<section class="section with-background bg-variant">
 				<div class="flex flex-col gap-10">
 					{
@@ -94,10 +79,10 @@ const skillsCollection = [
 							<div class="flex flex-col gap-3 w-auto mx-auto">
 								<h5>{category}</h5>
 								<div class="mention-card">
-									<div class="flex justify-between items-center w-fulld">
+									<div class="flex justify-between items-center flex-wrap w-fulld">
 										{
 											skills.map(({ name, icon: IconToRender}) => (
-												<div class="w-16 mx-3" title={name}><IconToRender/></div>
+												<div class="w-16 m-3" title={name}><IconToRender/></div>
 											))
 										}
 									</div>
@@ -113,7 +98,7 @@ const skillsCollection = [
 	<style>
 		.mention-card {
 			display: flex;
-			height: 7rem;
+			padding: .5rem;
 			justify-content: center;
 			align-items: center;
 			text-align: center;
