@@ -53,10 +53,10 @@ const projects = (await getCollection('work')).sort(
 
 const skillsCollection = [
 	{category: 'Programming Languages', skills: [{name: 'C#', icon: Csharp}, {name: 'Python', icon: Python}, {name: 'Java', icon: Java}, {name: 'Html', icon: Html}, {name: 'Css', icon: Css}, {name: 'Javascript', icon: Javascript}, {name: 'Typescript', icon: Typescript}, {name: 'Php', icon: Php}]},
-	{category: 'Fronted', skills: [{name: 'NextJs', icon: Nextjs}, {name: 'React', icon: React}, {name: 'Angular', icon: Angular}, {name: 'Astro', icon: AstroIcon}, {name: 'Material UI', icon: MaterialUI}, {name: 'Grommet', icon: Grommet}, {name: 'Prime React', icon: PrimeUI}]},
+	{category: 'Frontend', skills: [{name: 'NextJs', icon: Nextjs}, {name: 'React', icon: React}, {name: 'Angular', icon: Angular}, {name: 'Astro', icon: AstroIcon}, {name: 'Material UI', icon: MaterialUI}, {name: 'Grommet', icon: Grommet}, {name: 'Prime React', icon: PrimeUI}]},
 	{category: 'Backend', skills: [{name: 'NestJs', icon: Nestjs}, {name: 'Laravel', icon: Laravel}, {name: 'Express', icon: Express}, {name: 'Prisma', icon: Prisma}, {name: 'Api', icon: Api}, {name: 'Keystone', icon: Keystonejs}]},
 	{category: 'Databases', skills: [{name: 'PostgresSQL', icon: Postgres}, {name: 'MySQL', icon: Mysql}, {name: 'SQLite', icon: Sqlite}, {name: 'SQLServer', icon: Sqlserver}]},
-	{category: 'Project Experiences', skills: [{name: 'Scrum Methodology', icon: Scrum}, {name: 'Agile Development', icon: Agile}, {name: 'Leadership Experience', icon: Leadership}, {name: 'Business requirements analysis', icon: Requirements}, {name: 'Systems Architectures knowledge', icon: SystemArchitecture}, {name: 'Team Work', icon: TeamWork}, {name: 'Multi Role ability', icon: MultiRole}]},
+	{category: 'Project Experiences', skills: [{name: 'Scrum', icon: Scrum}, {name: 'Agile', icon: Agile}, {name: 'Leadership', icon: Leadership}, {name: 'Business analysis', icon: Requirements}, {name: 'Systems', icon: SystemArchitecture}, {name: 'Team Work', icon: TeamWork}, {name: 'Multi Role', icon: MultiRole}]},
 	{category: 'Tools', skills: [{name: 'Jira', icon: Jira}, {name: 'Bitbucket', icon: Bitbucket}, {name: 'Slack', icon: Slack}, {name: 'Git', icon: Git}, {name: 'Discord', icon: Discord}, {name: 'Webstorm', icon: Webstorm}, {name: 'Phpstorm', icon: Phpstorm}, {name: 'VSCode', icon: Vscode}, {name: 'Visual Studio', icon: Vs}]},
 ];
 ---
@@ -82,7 +82,7 @@ const skillsCollection = [
 									<div class="flex justify-between items-center flex-wrap w-fulld">
 										{
 											skills.map(({ name, icon: IconToRender}) => (
-												<div class="w-16 m-3" title={name}><IconToRender/></div>
+												<div class="w-16 m-3" title={name}><IconToRender/>{name}</div>
 											))
 										}
 									</div>
